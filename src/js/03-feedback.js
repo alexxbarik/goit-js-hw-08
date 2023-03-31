@@ -47,6 +47,9 @@ function onBtnSubmitClick(evt){
         console.log(error.name); 
         console.log(error.message); 
       }
+      if (form.email.value === "" || form.message.value === "") {
+        alert ("Please fill in all the fields!");
+      }
 
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);

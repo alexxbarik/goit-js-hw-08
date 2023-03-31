@@ -24,9 +24,20 @@ const cardsMarkup = (createCardMarkup(galleryItems));
 galleryContainer.insertAdjacentHTML(`beforeend`, cardsMarkup);
 
 
+// ! вибачте, але я так і недопер як скористатися функцією, як ви писали у коментарі, 
+// !якщо можна киньте приклад будьласка, бо дуже цікаво.
+// !у 1 завданні потрібно використати функцію зворотнього виклику (callback), 
+// !яка отримує об'єкт події та змінює властивість captionsData об'єкта на alt, 
+// !для цього у 29 рядку передайте парамет до ф-ції і передайте його для параметр.captionsData = "alt";
+// let gallery = new SimpleLightbox('.gallery a');
+// gallery.on('show.simplelightbox', function (evt) {
+//     captionsData: `alt`
+//     captionPosition: `bottom`
+//     captionDelay: 250
+// });
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-	captionsData: `alt`
-    
+const lightbox = new SimpleLightbox (`.gallery a`,{
+	captionsData: `alt`,
+    captionPosition: `bottom`,
+    captionDelay: 250,
 });
